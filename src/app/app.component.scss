@@ -1,4 +1,10 @@
-.navbar {
-  display: flex;
-  justify-content: center;
+.app-container {
+  background: #e5e5e5;
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    margin-top: 8px;
+  }
 }

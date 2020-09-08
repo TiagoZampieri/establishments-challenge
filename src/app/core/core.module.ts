@@ -6,14 +6,19 @@ import { CoreComponent } from './core.component';
 import { ListComponent } from './establishment/list/list.component';
 import { EstablishmentSettingsComponent } from './establishment/establishment-settings/establishment-settings.component';
 import { SharedModule } from '../shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
-  declarations: [CoreComponent, ListComponent, EstablishmentSettingsComponent],
+  declarations: [
+    CoreComponent,
+    ListComponent,
+    EstablishmentSettingsComponent
+  ],
   imports: [
     CommonModule,
     CoreRoutingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class CoreModule { }

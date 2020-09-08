@@ -1,17 +1,15 @@
 <div class="card-container">
   <div class="card-content">
     <div class="card-img">
-      <img src="../../../../assets/logo-subway.png"
-          >    </div>
+      <img [src]="establishment.picture">
+    </div>
     <div class="card-info">
       <div class="info-title">
-        <span class="name">Subway</span>
-        <span class="id">14131</span>
+        <span class="name">{{ establishment.name }}</span>
+        <span class="id">{{ establishment.id }}</span>
       </div>
       <div class="info-footer">
-        <span class="city">Curitiba</span>
-        <hr>
-        <span class="street">R. tal</span>
+        <span class="city">{{ establishment.address }}</span>
       </div>
     </div>
   </div>

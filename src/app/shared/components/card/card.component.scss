@@ -3,6 +3,7 @@
   border: 1px solid #f9f9f9;
   border-radius: 5px;
   box-shadow: 0px 1px 1px rgba(66, 48, 48, 0.05);
+  margin-bottom: 8px;
 }
 
 .card-content {
@@ -16,12 +17,6 @@
 
     .info-footer {
       display: block;
-      hr {
-        transform: rotate(90deg);
-        margin: 10px 4px;
-        width: 9px;
-        background: #d3d5e0;
-      }
     }
   }
 
