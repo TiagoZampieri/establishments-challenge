@@ -16,14 +16,12 @@ export class ListComponent implements OnInit {
     private establishmentService: EstablishmentService
   ) { }
 
-  ngOnInit(): void {
-    this.establishmentService.getStablishments()
-      .pipe(take(1))
-      .subscribe(response => {
-        this.establishments = response;
-      }, err => {
-        console.log(err);
-      });
+  async ngOnInit(): Promise<void> {
+    if (localStorage.getItem('establishments')) {
+      this.establishments = JSON.parse(localStorage.getItem('establishments'));
+    } else {
+      this.establishments = await this.establishmentService.getEstablishments()
+        .toPromise();
+    }
   }
-
 }

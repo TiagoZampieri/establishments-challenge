@@ -5,7 +5,16 @@ import { CoreComponent } from './core.component';
 import { EstablishmentSettingsComponent } from './establishment/establishment-settings/establishment-settings.component';
 import { ListComponent } from './establishment/list/list.component';
 
-const routes: Routes = [{ path: '', component: ListComponent }];
+const routes: Routes = [
+  {
+    path: '',
+    component: ListComponent
+  },
+  {
+    path: ':id',
+    component: EstablishmentSettingsComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

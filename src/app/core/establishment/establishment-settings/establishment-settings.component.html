@@ -1,1 +1,159 @@
-<p>establishment-settings works!</p>
+<form [formGroup]="form">
+  <ng-container *ngIf="!!!establishment; else container">
+
+  </ng-container>
+  <ng-template #container>
+    <div class="details-container">
+      <div class="details-header">
+        <div class="back-icon">
+          <span class="icon">
+            <i class="fas fa-long-arrow-left"></i>
+          </span>
+        </div>
+        <div class="img">
+          <img src="http://placehold.it/32x32">
+        </div>
+        <div class="establishment-info">
+          <span class="name">{{ establishment.name }}</span>
+          <span class="id">
+            {{ establishment.id }}
+          </span>
+        </div>
+      </div>
+      <div class="details-body">
+        <div class="basic-info">
+          <div class="section-title">
+            <span>Informações básicas</span>
+            <hr>
+          </div>
+          <div class="levels">
+            <div class="level-item">
+              <div class="field">
+                <label class="label">
+                  Nome
+                </label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Nome"
+                    formControlName="name">
+                </div>
+              </div>
+            </div>
+            <div class="level-item">
+              <div class="field">
+                <label class="label">
+                  Cidade
+                </label>
+                <div class="select is-fullwidth">
+                  <select name="country">
+                    <option *ngFor="let city of cities" [value]="city">
+                      {{ city }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="level-item">
+              <div class="field">
+                <label class="label">
+                  Endereço
+                </label>
+                <input class="input" type="text" placeholder="Endereço"
+                  formControlName="address">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="finance-info">
+          <div class="section-title">
+            <span>Financeiro</span>
+            <hr>
+          </div>
+          <div class="levels">
+            <div class="level-item">
+              <div class="field">
+                <label class="label">
+                  Banco
+                </label>
+                <div class="select is-fullwidth">
+                  <select name="country">
+                    <option *ngFor="let bank of banks" [value]="bank">
+                      {{ bank }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="level-item">
+              <div class="field">
+                <label class="label">
+                  Tipo de conta
+                </label>
+                <div class="select is-fullwidth">
+                  <select name="country">
+                    <option *ngFor="let type of accountTypes" [value]="type">
+                      {{ type }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="level-item">
+              <div class="field">
+                <label class="label">
+                  CPF/CNPJ
+                </label>
+                <input class="input" type="email" placeholder="Extra small">
+              </div>
+            </div>
+          </div>
+          <div class="levels">
+            <div class="level-item item-vertical">
+              <label class="label">Agencia</label>
+              <div class="horizontal-field">
+                <div class="field-large">
+                  <input class="input">
+                </div>
+                <div class="field-small">
+                  <input class="input">
+                </div>
+              </div>
+            </div>
+            <div class="level-item item-vertical">
+              <label class="label">Conta</label>
+              <div class="horizontal-field">
+                <div class="field-large">
+                  <input class="input">
+                </div>
+                <div class="field-small">
+                  <input class="input">
+                </div>
+              </div>
+            </div>
+            <div class="level-item">
+              <div class="field">
+                <label class="label">
+                  Saque automático?
+                </label>
+                <div class="select is-fullwidth">
+                  <select name="country">
+                    <option value="Curitiba">Curitiba</option>
+                    <option value="São Paulo">São Paulo</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-grouped is-grouped-right">
+          <p class="control">
+            <button class="button is-primary"
+              (click)="save(form.value)"
+              [disabled]="form.invalid || !changed">
+              Submit
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</form>
