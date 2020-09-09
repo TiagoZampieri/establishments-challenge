@@ -2,26 +2,26 @@
 
 This is the front-end challenge for James delivery, developed in [Angular](https://angular.io) version 10.1.0
 
+## Clone repo
+
+First run `git clone https://github.com/TiagoZampieri/establishments-challenge.git`.
+Or fork this repo.
+
+## Dependencies
+
+To install the dependencies of this project, you must navigate to the poject folder and run `npm install`
+
+### Dependencies of this project beyond angular dependecies
+* [Bulma](https://bulma.io)
+* [surge.sh](https://surge.sh)
+
+
 ## Deploy instructions
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To deploy locally, go to the project folder and run `ng serve`.
+Than navigate to `http://localhost:4200/`.
 
-## Code scaffolding
+## Surge
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+You can also view the application runing on a surge server
+[jamesdlvry-challenge.surge.sh](http://jamesdlvry-challenge.surge.sh/establishment)
