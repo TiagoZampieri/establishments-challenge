@@ -60,6 +60,10 @@ export class EstablishmentSettingsComponent implements OnInit {
     });
   }
 
+  public backNavigate(): void {
+    this.router.navigate(['establishment', { relativeTo: this.router }]);
+  }
+
   public save(data: Establishment): void {
     this.establishmentService.updateEstablishmentById(this.establishmentId, data);
     this.router.navigate(['establishment', { relativeTo: this.router }]);
