@@ -24,4 +24,4 @@ Than navigate to `http://localhost:4200/`.
 ## Surge
 
 You can also view the application running on a surge server
-[http://maddening-fork.surge.sh](http://jamesdlvry-challenge.surge.sh/)
+[Click here!](http://maddening-fork.surge.sh)
